@@ -31,3 +31,15 @@ The root three folder will contain your *Jupyter Notebook*, *Flask API*, and *An
     git push origin i22b0008s01
 ```
 
+
+Task completed and Changes in this commit: 
+
+Q1: Find the division/district/year/month wise total_sale_price joining fact table and respective dimension table 
+
+Q2: Find the customer/bank/transaction(cash/online) wise total_sale_price joining fact table and respective dimension table 
+
+Q3: Total sales in Barisal
+
+Q4: Total sales in 2015
+
+Q5: Total sales of Barisal in 2015
