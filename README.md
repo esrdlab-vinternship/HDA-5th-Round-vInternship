@@ -43,3 +43,16 @@ Q3: Total sales in Barisal
 Q4: Total sales in 2015
 
 Q5: Total sales of Barisal in 2015
+
+
+Task completed and Changes in this commit: 
+
+Q6: For each store(item supplier), what are the top three products offered that are most often purchased?
+
+Q7: What products have been sold through card or mobile since X days?
+
+Q8: What season(quarter) is the worst for each product item? As example,
+
+Q9: Break down the total sales of items geographically (division-wise).
+
+Q10: What are the average sales of products sales per store monthly?
