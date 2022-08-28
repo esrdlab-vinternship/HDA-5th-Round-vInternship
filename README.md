@@ -1,7 +1,8 @@
 
 # MySOFT Health Data Analytics Technology Learning
 
-This is conflict test.
+This is a test
+this is test2
 
 
 ## Codebase Structure
