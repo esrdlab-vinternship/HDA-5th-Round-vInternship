@@ -1,7 +1,7 @@
 
 # MySOFT Health Data Analytics Technology Learning
 
-This repository will contain the practicing code and matarials of interns.
+This is conflict test.
 
 
 ## Codebase Structure
