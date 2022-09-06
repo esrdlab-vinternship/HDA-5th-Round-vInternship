@@ -90,15 +90,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "f7b56977-8af3-4664-93eb-5214fbbb231a"
+    "analytics": false
   }
 }
