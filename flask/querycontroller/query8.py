@@ -18,7 +18,7 @@ class Query8:
                     "GROUP BY CUBE(i.item_name, tim.quarter) " \
                     "ORDER BY i.item_name, sum(ft.total_price)"
         cur.execute(s_quarter)
-        sq = cur.fetchall()
+        sq = cur.fetchall()[:10]
         quarter_info = pd.DataFrame(list(sq), columns=['item', 'quarter', 'sales'])
         quarter_info = quarter_info.dropna()
         # quarter_info = quarter_info.groupby('quarter').head(10)
