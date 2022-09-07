@@ -18,8 +18,8 @@ class Query10:
                 "GROUP BY CUBE(s.store_key, tim.month) "\
                 "ORDER BY s.store_key, tim.month "
         cur.execute(query10)
-        avg = cur.fetchall()
-        avgmon = pd.DataFrame(list(avg), columns=['store_id', 'month', 'average sales'])
+        avg = cur.fetchall()[:12]
+        avgmon = pd.DataFrame(list(avg), columns=['store_id', 'month', 'average_sales'])
         print(avgmon)
         return avgmon.to_dict(orient='records')
 

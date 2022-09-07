@@ -18,7 +18,7 @@ class Query9:
             "GROUP BY CUBE(i.item_name, s.division) "\
             "ORDER BY i.item_name,s.division "
         cur.execute(query9)
-        itemsdiv = cur.fetchall()
+        itemsdiv = cur.fetchall()[:10]
         idiv = pd.DataFrame(list(itemsdiv), columns=['Item', 'Division', 'Sales'])
         idiv = idiv.dropna()
         # pd_data.set_index("Division", inplace = True)
