@@ -17,8 +17,10 @@ class Query6:
                  "GROUP BY CUBE(s.store_key, i.item_name)" \
                  "ORDER BY s.store_key, sum(f.quantity) desc"
         cur.execute(query6)
-        result = cur.fetchall()[:50]
+        result = cur.fetchall()
+
         pd_data = pd.DataFrame(list(result), columns=['store_key', 'item_name', 'quantity_sales_for_each_item'])
+
         # pd_data['sales'] = pd_data['sales'].astype('float64')
         pd_data = pd_data.dropna()
         pd_data = pd_data.set_index('item_name').groupby("store_key")['quantity_sales_for_each_item'].nlargest(
@@ -27,6 +29,7 @@ class Query6:
         # drop the quantity column
         pd_data.drop(columns='quantity_sales_for_each_item', axis=1, inplace=True)
         # organize the output
+        pd_data = pd_data[:30]
         x = (pd_data.groupby(['store_key'])
              .apply(lambda x: x[['item_name']].to_dict('records'))
              .reset_index()
