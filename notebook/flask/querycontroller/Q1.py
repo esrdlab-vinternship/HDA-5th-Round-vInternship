@@ -8,7 +8,7 @@ class Query1():
 
 # Total Price By Division
         con = PostgresConnection().getConnection()
-        insert_stmt = """SELECT store_dim.division as "Division", SUM(fact_table.total_price) "Total Sale Price" 
+        insert_stmt = """SELECT store_dim.division, SUM(fact_table.total_price)  as sales 
             FROM star_schema.fact_table 
             JOIN star_schema.store_dim ON store_dim.store_key = fact_table.store_key 
             GROUP BY CUBE(store_dim.division) 

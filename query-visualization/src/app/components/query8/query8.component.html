@@ -1,0 +1,12 @@
+<div>
+    <li *ngFor = "let d of data_all">
+      {{d.item}} - {{d.quarter}}
+    </li>
+  </div>
+  <div class="chart-wrapper">
+    <canvas baseChart 
+    [datasets] = "chartData"
+    [labels] = "chartLabels"
+    [options] = "chartOptions">
+    </canvas>
+  </div>

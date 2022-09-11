@@ -1,0 +1,12 @@
+<div>
+    <li *ngFor = "let d of data_all">
+      {{"Toal Sales in 2015"}} - {{d.total_sales}}
+    </li>
+  </div>
+  <div class="chart-wrapper">
+    <canvas baseChart 
+    [datasets] = "chartData"
+    [labels] = "chartLabels"
+    [options] = "chartOptions">
+    </canvas>
+  </div>

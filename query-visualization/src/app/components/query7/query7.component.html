@@ -1,0 +1,13 @@
+<div>
+    <li *ngFor = "let d of data_all">
+      {{d.division}} - {{d.sales}}
+    </li>
+  </div>
+  <div class="chart-wrapper">
+    <canvas baseChart 
+    [type] = "'line'"
+    [datasets] = "chartData"
+    [labels] = "chartLabels"
+    [options] = "chartOptions">
+    </canvas>
+  </div>

@@ -1,3 +1,8 @@
 .idea/
 **/*.ipynb_checkpoints/
 .ipynb_checkpoints/
+node_modules
+package-lock.json
+package.json
+/notebook/flask/queryservices/__pycache__/
+/notebook/flask/__pycache__/

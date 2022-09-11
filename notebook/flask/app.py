@@ -19,7 +19,7 @@ CORS(app)
 #     return jsonify({
 #             'Name': data_dict['name'],
 #             'Age': data_dict['age']
-#         })
+#         })py
 app.register_blueprint(query_api1, url_prefix = '/api/')
 app.register_blueprint(query_api2, url_prefix = '/api/')
 app.register_blueprint(query_api3, url_prefix = '/api/')
