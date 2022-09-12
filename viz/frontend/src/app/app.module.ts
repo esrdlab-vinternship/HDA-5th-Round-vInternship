@@ -17,6 +17,8 @@ import { Query7Component } from './components/query7/query7.component';
 import { Query8Component } from './components/query8/query8.component';
 import { Query9Component } from './components/query9/query9.component';
 import { Query10Component } from './components/query10/query10.component';
+import {IgxCategoryChartCoreModule, IgxLegendModule} from "igniteui-angular-charts";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,13 +35,16 @@ import { Query10Component } from './components/query10/query10.component';
     Query9Component,
     Query10Component
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    NgChartsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CommonModule,
+        NgChartsModule,
+        HttpClientModule,
+        IgxCategoryChartCoreModule,
+        IgxLegendModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
