@@ -10,6 +10,9 @@ import { Query2Component } from './components/query2/query2.component';
 import {NgChartsModule} from "ng2-charts";
 import {HttpClientModule} from "@angular/common/http";
 import { Query3Component } from './components/query3/query3.component';
+import { Query7Component } from './components/query7/query7.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {DataTablesModule} from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -17,15 +20,18 @@ import { Query3Component } from './components/query3/query3.component';
     AddTutorialComponent,
     Query1Component,
     Query2Component,
-    Query3Component
+    Query3Component,
+    Query7Component
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    NgChartsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CommonModule,
+        NgChartsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        DataTablesModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

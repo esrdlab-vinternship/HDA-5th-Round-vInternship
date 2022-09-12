@@ -14,7 +14,7 @@ export class Query2Component implements OnInit {
   sales_data: any[] = [];
   chartData: ChartDataset[] = [
     {
-      type: "polarArea",
+      type: "bar",
       label: 'Sales in Taka',
       data: this.sales_data,
     }

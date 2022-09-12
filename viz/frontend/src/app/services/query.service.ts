@@ -19,4 +19,9 @@ export class QueryService {
   getQuery2(): Observable <any> {
     return this.http.get<any>(`${baseUrl}/query2`);
   }
+  getQuery7(days?:any): Observable <any> {
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify({'days': days});
+    return this.http.post(`${baseUrl}/query7`, body,{'headers':headers})
+  }
 }

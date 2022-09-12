@@ -1,3 +1,5 @@
+from numpy.ma import count
+
 from DBconnection.dbconf import PostgresConnection
 import pandas as pd
 
@@ -24,6 +26,6 @@ class Query7:
 
 
 if __name__ == '__main__':
-    query7 = Query7(days=350)
+    query7 = Query7(days=400)
     data = query7.execute()
-    print(data)
+    print(count(data))

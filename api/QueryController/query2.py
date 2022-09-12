@@ -17,7 +17,7 @@ class Query2:
                 "GROUP BY CUBE (s.name) " \
                 "ORDER BY s.name"
         cur.execute(query)
-        result = cur.fetchall()[:10]
+        result = cur.fetchall()[1:12]
         pd_data = pd.DataFrame(list(result), columns=['customer', 'sales'])
         pd_data['sales'] = pd_data['sales'].astype('float64')
         pd_data = pd_data.dropna()
