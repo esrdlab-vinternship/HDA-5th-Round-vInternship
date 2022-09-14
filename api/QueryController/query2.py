@@ -17,9 +17,9 @@ customer_dim.customer_key = fact_table.customer_key
 GROUP BY CUBE(customer_dim.name)
 ORDER BY customer_dim.name"""
         cur.execute(query)
-        result = cur.fetchall()
+        result = cur.fetchall()[10]
         pd_data = pd.DataFrame(list(result), columns=['customer', 'sales'])
-        pd_data['sales'] = pd_data['sales'].astype('float64')
+        pd_data['sales'][10]= pd_data['sales'].astype('float64')
         pd_data = pd_data.dropna()
         # print(pd_data)
         return pd_data.to_dict(orient='records')
