@@ -1,0 +1,14 @@
+<h1>Query 2</h1>
+<div>
+  <li *ngFor="let d of data_all">
+    {{d.customer}} - {{d.sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>
+
