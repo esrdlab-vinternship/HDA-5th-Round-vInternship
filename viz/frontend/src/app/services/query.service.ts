@@ -29,5 +29,21 @@ export class QueryService {
   getQuery5(): Observable <any> {
     return this.http.get<any>(`${baseUrl}/query5`);
   }
-
+  getQuery6(): Observable <any> {
+    return this.http.get<any>(`${baseUrl}/query6`);
+  }
+  getQuery7(days?:any): Observable <any> {
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify({'days': days});
+    return this.http.post(`${baseUrl}/query7`, body,{'headers':headers})
+  }
+  getQuery8(): Observable <any> {
+    return this.http.get<any>(`${baseUrl}/query8`);
+  }
+  getQuery9(): Observable <any> {
+    return this.http.get<any>(`${baseUrl}/query9`);
+  }
+  getQuery10(): Observable <any> {
+    return this.http.get<any>(`${baseUrl}/query10`);
+  }
 }

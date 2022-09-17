@@ -14,60 +14,20 @@ export class Query2Component implements OnInit {
   sales_data: any[] = [];
   chartData: ChartDataset[] = [
     {
-      type: "polarArea",
+      type: "bar",
       label: 'Sales in Taka',
       data: this.sales_data,
     }
   ];
   chartLabels: string[] = this.customer_data;
   chartOptions: ChartOptions = {
-
-    // ⤵️ Fill the wrapper
-    responsive: true,
-    maintainAspectRatio: true,
-
-    // ⤵️ Remove the grids
-    // scales: {
-    //   xAxis: {
-    //     display: false,
-    //     grid: {
-    //       drawBorder: false // removes random border at bottom
-    //     }
-    //   },
-    //   yAxis: {
-    //     display: false
-    //   }
-    // },
-
-    plugins: {
-      legend: {
-        display: true,
-        labels: {
-          color: 'rgb(14,38,3)'
-        }
-      },
-
-      tooltip: {
-        // ⤵️ tooltip main styles
-        backgroundColor: '#ffeaff',
-        displayColors: false, // removes unnecessary legend
-        padding: 10,
-
-        // ⤵️ title
-        titleColor: '#0b4ad2',
-        titleFont: {
-          size: 18
-        },
-
-        // ⤵️ body
-        bodyColor: '#2D2F33',
-        bodyFont: {
-          size: 13
-        }
+    scales: {
+      y: {
+        beginAtZero: true
       }
-    }
-  };
+    },
 
+  };
   constructor(private queryService: QueryService) { }
 
   ngOnInit(): void {

@@ -12,6 +12,12 @@ import {HttpClientModule} from "@angular/common/http";
 import { Query3Component } from './components/query3/query3.component';
 import { Query4Component } from './components/query4/query4.component';
 import { Query5Component } from './components/query5/query5.component';
+import { Query6Component } from './components/query6/query6.component';
+import { Query7Component } from './components/query7/query7.component';
+import { Query8Component } from './components/query8/query8.component';
+import { Query9Component } from './components/query9/query9.component';
+import { Query10Component } from './components/query10/query10.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,15 +27,21 @@ import { Query5Component } from './components/query5/query5.component';
     Query2Component,
     Query3Component,
     Query4Component,
-    Query5Component
+    Query5Component,
+    Query6Component,
+    Query7Component,
+    Query8Component,
+    Query9Component,
+    Query10Component
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    NgChartsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CommonModule,
+        NgChartsModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

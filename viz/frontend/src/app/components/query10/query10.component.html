@@ -1,0 +1,14 @@
+<div class="justify-content-center">
+  <h1 class="text-primary">Query 10</h1>
+</div>
+<div *ngFor="let data of data_all" >
+  {{data.item_name}} ---{{data.month}}--- {{data.sales}}
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>
