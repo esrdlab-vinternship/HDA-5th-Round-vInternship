@@ -1,12 +1,77 @@
-<div>
-    <li *ngFor = "let d of data_all">
-      {{d.item}} - {{d.quarter}}
-    </li>
+<style>
+  .xyz 
+  {
+  
+  border: 1px solid #0f0d0d;
+  }
+  .xyz tr{
+    border: 1px solid #0f0d0d;
+  }
+  .xyz td{
+    border: 1px solid #0f0d0d;
+  }
+  .xyz th{
+    border: 1px solid #0f0d0d;
+  }
+</style> 
+
+<html>
+  <body>
+    
+  <h2> Q8: What season(quarter) is the worst for each product item? </h2>
+  <div class="ngx-datatable">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover xyz" >
+      <!-- <table> -->
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th> Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr> 
+          <td> Quarter 1 </td>
+          <td>
+            <tr *ngFor="let d of data_all">
+              <li *ngIf="d.quarter == 'Q1' ">
+                {{d.item}}
+              </li>
+            </tr>
+          </td>
+        </tr>
+        <tr> 
+          <td> Quarter 2 </td>
+          <td>
+            <tr *ngFor="let d of data_all">
+              <li *ngIf="d.quarter == 'Q2' ">
+                {{d.item}}
+              </li>
+            </tr>
+          </td>
+        </tr>
+        <tr> 
+          <td> Quarter 3 </td>
+          <td>
+            <tr *ngFor="let d of data_all">
+              <li *ngIf="d.quarter == 'Q3' ">
+                {{d.item}}
+              </li>
+            </tr>
+          </td>
+        </tr>
+        <tr> 
+          <td> Quarter 4 </td>
+          <td>
+            <tr *ngFor="let d of data_all">
+              <li *ngIf="d.quarter == 'Q4' ">
+                {{d.item}}
+              </li>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="chart-wrapper">
-    <canvas baseChart 
-    [datasets] = "chartData"
-    [labels] = "chartLabels"
-    [options] = "chartOptions">
-    </canvas>
-  </div>
+  
+  </body>
+</html>

@@ -7,5 +7,5 @@ class PostgresConnection(object):
                                           host = "127.0.0.1",
                                           port = "5432")
     def getConnection(self):
-        print("Connection to DB established!")
+        # print("Connection to DB established!")
         return self.connection

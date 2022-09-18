@@ -1,12 +1,39 @@
-<div>
-    <li *ngFor = "let d of data_all">
-      {{"Total Sales at division Barisal in the year 2015"}} - {{d.total_sales}}
-    </li>
-  </div>
-  <div class="chart-wrapper">
-    <canvas baseChart 
-    [datasets] = "chartData"
-    [labels] = "chartLabels"
-    [options] = "chartOptions">
-    </canvas>
-  </div>
+
+  <style>
+    .xyz 
+    {
+    
+    border: 1px solid #0f0d0d;
+    }
+    .xyz tr{
+      border: 1px solid #0f0d0d;
+    }
+    .xyz td{
+      border: 1px solid #0f0d0d;
+    }
+  </style> 
+  
+  <html>
+    <body>
+      <h2> Q5: Total sales of Barisal in 2015  </h2>
+      <table class="xyz">
+        <tr>
+          <td> Division and Year</td>
+          <td> Total Sales </td>
+        </tr>
+        
+        <tr *ngFor = "let d of data_all">
+          <td> {{"Barisal in 2015"}} </td>
+          <td> {{d.total_sales}} </td>
+        </tr>
+      </table>
+      <div class="chart-wrapper">
+        <canvas baseChart 
+        [datasets] = "chartData"
+        [labels] = "chartLabels"
+        [options] = "chartOptions">
+        </canvas>
+      </div>
+    
+    </body>
+  </html>

@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <li *ngFor = "let d of data_all">
       {{d.division}} - {{d.item_name}} - {{d.sum}}
     </li>
@@ -9,4 +9,112 @@
     [labels] = "chartLabels"
     [options] = "chartOptions">
     </canvas>
-  </div>  
+  </div>   -->
+
+  <style>
+    .xyz 
+    {
+    
+    border: 1px solid #0f0d0d;
+    }
+    .xyz tr{
+      border: 1px solid #0f0d0d;
+    }
+    .xyz td{
+      border: 1px solid #0f0d0d;
+    }
+    .xyz th{
+      border: 1px solid #0f0d0d;
+    }
+  </style> 
+  
+  <html>
+    <body>
+      
+    <h2> Q9: Break down the total sales of items geographically (division-wise). </h2>
+    <div class="ngx-datatable">
+      <table class="xyz" >
+        <!-- <table> -->
+        <thead>
+          <tr>
+            <th>Division</th>
+            <th> Item --- Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> 
+            <td> DHAKA </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.division == 'DHAKA' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> RAJSHAHI </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'RAJSHAHI' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> SYLHET </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'SYLHET' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> CHITTAGONG </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'CHITTAGONG' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> RANGPUR </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'RANGPUR' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> BARISAL </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'BARISAL' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+          <tr> 
+            <td> KHULNA </td>
+            <td>
+              <tr *ngFor="let d of data_all">
+                <li *ngIf="d.quarter == 'KHULNA' ">
+                  {{d.item_name}} --- {{d.sum}}
+                </li>
+              </tr>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    </body>
+  </html>

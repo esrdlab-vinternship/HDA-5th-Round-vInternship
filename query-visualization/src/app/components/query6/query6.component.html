@@ -1,12 +1,51 @@
-<div>
-    <li *ngFor = "let d of data_all">
-      {{d.division}} - {{d.sales}}
+<!-- <div>
+    <li *ngFor = "let d of data_all | keyvalue">
+      {{d.key}} - {{d.value[0]}} - {{d.value[1]}} - {{d.value[2]}} 
     </li>
+</div> -->
+
+<!-- <div class="dropdown" *ngFor = "let d of data_all | keyvalue">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{d.key}}
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">{{d.value[0]}}</a>
+    <a class="dropdown-item" href="#">{{d.value[1]))</a>
+    <a class="dropdown-item" href="#">{{d.value[2]}}</a>
   </div>
-  <div class="chart-wrapper">
-    <canvas baseChart 
-    [datasets] = "chartData"
-    [labels] = "chartLabels"
-    [options] = "chartOptions">
-    </canvas>
+</div> -->
+<!-- <h5><u><i>Demo to create search bar in Angular material!! </i></u></h5> -->
+<h2>  Q6: For each store(item supplier), what are the top three products offered that are most often purchased?  </h2>
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <span matPrefix> </span>
+    <input type="tel" matInput placeholder="Search" name="search" [(ngModel)]="search">
+    <button matSuffix mat-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</form> -->
+ 
+  <div class="row" *ngFor = "let d of data_all | keyvalue">
+    <!-- <div *ngIf="search == d.key; then block1; else block2">
+    </div>
+    <ng-template #block1>Found {{search}}</ng-template> -->
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+          {{d.key}} 
+        </a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <li>
+            <h4>1. {{d.value[0]}} </h4>
+            <h4>2. {{d.value[1]}}</h4>
+            <h4>3. {{d.value[2]}}</h4>
+          </li>
+        </div>
+      </div>
+    </div>
   </div>

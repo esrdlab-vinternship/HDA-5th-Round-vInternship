@@ -1,12 +1,37 @@
-<div>
-    <li *ngFor = "let d of data_all">
-      {{d.trans_type}} - {{d.total_sales}}
-    </li>
-  </div>
-  <div class="chart-wrapper">
-    <canvas baseChart
-    [datasets] = "chartData"
-    [labels] = "chartLabels"
-    [options] = "chartOptions">
-    </canvas>
-  </div>
+  <style>
+    .xyz 
+    {
+    border: 1px solid #0f0d0d;
+    }
+    .xyz tr{
+      border: 1px solid #0f0d0d;
+    }
+    .xyz td{
+      border: 1px solid #0f0d0d;
+    }
+  </style> 
+  
+  <html>
+    <body>
+      <h2> Q2: Find the transaction(cash/online) wise total_sale_price joining fact table and respective dimension table   </h2>
+      <table class="xyz">
+        <tr>
+          <td> Transaction Type</td>
+          <td> Total Sales </td>
+        </tr>
+        
+        <tr *ngFor = "let d of data_all">
+          <td> {{d.trans_type}} </td>
+          <td> {{d.total_sales}} </td>
+        </tr>
+      </table>
+      
+      <div class="chart-wrapper">
+        <canvas baseChart
+        [datasets] = "chartData"
+        [labels] = "chartLabels"
+        [options] = "chartOptions">
+        </canvas>
+      </div>
+    </body>
+  </html>

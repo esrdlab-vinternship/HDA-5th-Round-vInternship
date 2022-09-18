@@ -1,12 +1,49 @@
-<div>
+<style>
+  .xyz 
+  {
+  
+  border: 1px solid #0f0d0d;
+  }
+  .xyz tr{
+    border: 1px solid #0f0d0d;
+  }
+  .xyz td{
+    border: 1px solid #0f0d0d;
+  }
+</style> 
+
+<!-- <h2> </h2> -->
+<html>
+  <body>
+    <h2> Q3: Total sales in Barisal </h2>
+    <table class="xyz">
+      <tr>
+        <td> Division</td>
+        <td> Total Sales </td>
+      </tr>
+      
+      <tr *ngFor = "let d of data_all">
+        <td> Barisal </td>
+        <td> {{d.total_sales}} </td>
+      </tr>
+    
+    </table>
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+      [datasets] = "chartData"
+      [labels] = "chartLabels"
+      [options] = "chartOptions">
+      </canvas>
+    </div>
+
+  </body>
+
+</html>
+
+<!-- <div>
     <li *ngFor = "let d of data_all">
       {{"Sales in Barisal"}} : {{d.total_sales}}
     </li>
-  </div>
-  <div class="chart-wrapper">
-    <canvas baseChart
-    [datasets] = "chartData"
-    [labels] = "chartLabels"
-    [options] = "chartOptions">
-    </canvas>
-  </div>
+  </div> -->
+ 
