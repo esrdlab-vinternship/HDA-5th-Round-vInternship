@@ -1,0 +1,21 @@
+<div class="justify-content-center">
+  <h2>
+    Query 6:
+    <small class="text-muted">Top Three Products Sold by Each Store</small>
+  </h2>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Store</th>
+      <th>Items</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of data_all">
+      <td>{{data.Store}}</td>
+      <td>{{data.Item}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

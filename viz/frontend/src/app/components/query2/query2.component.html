@@ -1,0 +1,19 @@
+<div class="justify-content-center">
+  <h2>
+    Query 2:
+    <small class="text-muted">Transaction Wise Sales</small>
+  </h2>
+</div>
+<div>
+  <li *ngFor="let data of data_all">
+      {{data.Type}} - {{data.Sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

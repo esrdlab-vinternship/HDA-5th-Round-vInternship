@@ -1,0 +1,18 @@
+<div class="justify-content-center">
+  <h2>
+    Query 1:
+    <small class="text-muted">Division Wise Sales</small>
+  </h2>
+<div>
+  <li *ngFor="let data of data_all" >
+  {{data.division}} - {{data.sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

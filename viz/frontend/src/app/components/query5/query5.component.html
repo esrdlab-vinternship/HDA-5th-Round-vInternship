@@ -1,0 +1,19 @@
+<div class="justify-content-center">
+  <h2>
+    Query 5:
+    <small class="text-muted">Total sales of Barisal in 2015</small>
+  </h2>
+</div>
+<div>
+  <li *ngFor="let data of data_all" >
+  {{data.District}} - {{data.Year}} - {{data.Sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>
